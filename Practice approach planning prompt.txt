@@ -1,0 +1,64 @@
+I'm planning to start development on a few games from September of this year in unreal engine 5.8 and blender (and any other required tools).
+
+GTFO, Dark souls / Elden ring, Snowrunner, Star Citizen etc. will be the games I'm interested in and the games I am planning to make will have the feel of these games and some similar mechanics etc. based on what I like about them but not a direct clone of them. It can be mix and match.
+
+The broad idea is that all the games I make will be in the same universe but have a different gameplay style etc. Some of the games (can also be considered as episodes) will have story line continuation and some will be from a different part of the universe of time period entirely.
+
+I will be releasing the game episodes as dlc, similar to how snowrunner releases maps in different seasons.
+
+A key feature of these games will be coop multiplayer. Can also play in single player in the same map or another person can join. I will be providing option to either join a friends session or a random session, similar to how pubg does matchmaking.
+
+Another key feature is crossplay. The game can be downloaded on windows or android device and the player progression continues where he left off by using cloud saves. The players can connect windows and android, or a combination.
+
+To test this basic multiplayer session connection, I have implemented a multiplayer integration in c++ third person template based project using epic online services. A player can login to epic (currently both player epic account are added in organization in epic developer portal as the game is not approved by epic or something. But should support random player connections aswell later on). Player can host and join, leave session, disable enable mic and speaker for voice chat etc. All of this is working as expected (I have tested hosting/joining and voice chat between windows and two android devices in same game session).
+
+
+So my conclusion is as follows.
+
+The multiplayer EOS test I have done is implemented in a day as I have implemented using help of claude code max plan with opus 4.8.
+
+If I have to learn how to implement and then do it, it would have taken atleast a week, or in worst case it might have taken a month if I were to go through multiplayer course, then practice and then implement, as the course covers online subsystem steam and only windows to windows. That would mean I need to figure out what additional / different things required for EOS and include android.
+
+As per this, I will be able to learn faster by asking for implementation primer/guide and do it partly by myself based on the guide and ask claude to finish up repetitive things and to identify any issues that arise (in my multiplayer EOS test, I definitely hit some issues with voice chat, that were fixed later with help of claude). Even though I will not remember all of it to replicate the same on my own, I have now the knowledge of all the pieces that are required to make this work and I will be able to  use that info and refer the existing implementation or ask claude for help with the code.
+
+Now my plan is to keep making some game ideas using claude and understanding how it is implemented and either reimplement of create a variation of those features myself to help me improve my skills. And I think this will be much faster than just trying myself blindly or by following tutorials.
+
+Below are the list of games I liked and noted down so that I can make clones of them. But it will take a lot of time even with claude, so I think a better idea is to make a game concept that will include most of the skills required for the game clones in different levels of complexity.
+
+For example a game with basic movement etc. Then add some weapons and combat functionality to it. Then if some unrelated feature is required for it, like a cookie clicker for example, that can be implemented in a separate level or even integrated as part of the same game in form of a minigame that open UMG/Slate UI on interacting with a board that shows the cookie clicker already in current game (may be the camera focuses the board into view, like how GTFO does terminal interation to focus on screen). This way a lot of different may be unrelated features can be implemented in the same game.
+
+
+List of games:
+
+- Vampire Survivors
+- Subway Surfers
+- Project IGI
+- GTFO (+mobile version)
+- Dark Souls 2
+- Snowrunner
+- Pubg
+- Project zomboid 3D (with better coop features)
+- Word of wonders (word guess puzzle)
+- Star Citizen (Unreal Engine, Good performance, Simple/Complex/Automated control systems)
+    - Make the worlds areas to have recognizable patterns, to find places, quests etc.
+- Chained together
+- Chess
+- Cookie clicker
+- Flappy bird
+- Prince of persia Warrior Within (+ mobile version with touch friendly controls)
+- hayday
+- don't starve together 3d topdown
+- Age of empires
+
+Not all of these games need to be implemented, but the features or the feel can be mixed and matched and if required separate into mini games format etc.
+
+
+Thus I have given all the info on what my thought process is.
+
+I need the roadmap, granual plan in each level of feature complexity from you.
+
+We do not need to create all the plan file at once, but a plan generator instruction set can be prepared, so for each granular level I have paste the plan generator instruction and provide the reference to the parent level item or the item details for which the plan need to be generated.
+
+Analyse this requirement and suggest me on how we handle this plan generation, roadmap and what scope should we expect etc. So once discussed on it and refined the approach I will confirm for you to generate the relevant roadmap and other md files.
+
+Don't generate anything until we finalize and I approved for actual file generation.
