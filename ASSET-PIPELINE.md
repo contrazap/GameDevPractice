@@ -7,7 +7,7 @@ How assets get into the game: acquisition decision tree, Meshy AI workflow, Blen
 1. **Engine/placeholder first.** Greybox with engine primitives, Manny/Quinn, and engine content while the feature is being built. Real assets come after the mechanic works.
 2. **Free/purchased pack exists?** Use it (see Sources below). Fastest path to game-ready topology, LODs, and sane materials — and studying a well-made pack is itself learning.
 3. **Meshy generation** — best for props, hero objects, and creatures where packs don't fit the game's look. Expect cleanup (below).
-4. **Hand-model in Blender** — simple hard-surface items, modular kit pieces, and anything where cleanup would take longer than modeling (you're intermediate; simple props are often faster by hand).
+4. **Hand-model in Blender** — simple hard-surface items, modular kit pieces, and anything where cleanup would take longer than modeling (you're intermediate; simple props are often faster by hand). For any deliberate self-build (including skill-building on hero assets), generate a dedicated plan: `asset-build` mode in PLAN-GENERATOR.md — primer, Blender steps with the [You]/[Claude] learning split, budgets, its own DoD.
 
 ## Sources (free / already owned)
 
@@ -53,4 +53,4 @@ Export: FBX or GLB with PBR maps. Always inspect in Blender before UE.
 
 ## What a feature plan's Assets section must specify
 
-Per asset: name/purpose → acquisition route (tree above) → budget row it falls under → required anim set (if skeletal) → any Meshy prompt suggestion → cleanup steps that apply. Plus a placeholder strategy so the feature is never blocked on assets.
+Per asset: name/purpose → recommended acquisition route (tree above) **and the self-build alternative, both with estimated session cost** → budget row it falls under → required anim set (if skeletal) → any Meshy prompt suggestion → cleanup steps that apply. Choosing self-build = generate an `asset-build` plan (PLAN-GENERATOR.md); it runs parallel to the feature. Plus a placeholder strategy so the feature is never blocked on assets.

@@ -20,7 +20,7 @@ Shared rules for all plans. The plan generator reads this file — change it her
    - **[You]** — first-of-a-kind concepts and core architecture. This is where learning happens; plans must put the new ideas here.
    - **[Claude]** — boilerplate, repetition, second instances of a pattern, debugging assistance.
    - **[Pair]** — tricky integrations done together (you drive, Claude navigates — or the reverse with you reviewing every step).
-5. **Knowledge notes are mandatory** per finished feature (template below). They exist because you won't remember implementations — the note + the code are what you'll return to.
+5. **Knowledge notes are mandatory** per finished feature (template below) — but split by author so they're never busywork: **[Claude]** drafts the mechanics sections (*What was built*, *How it works*, *Links*) from the session's code at feature close; **[You]** write only *Decisions & why*, *Gotchas & fixes*, and *Would do differently* (~5 min — the parts only you know). Repetition retains skill; notes retain **decisions and gotchas**, calibrate future primers (the plan generator reads them to avoid re-teaching), and are the only reference allowed in variation challenges. Optional recall step at feature close: run the generator's `quiz` mode and append the results to the note.
 
 ## Mobile budgets (PROVISIONAL — validate and update in P0.5 device profiling)
 
@@ -45,7 +45,7 @@ Deviations are allowed but must be stated and justified in the plan's Mobile & P
 - [ ] Mobile budgets respected, or deviation documented
 - [ ] Mobile Preview (Android Vulkan) render check for anything visual
 - [ ] Compiles clean; no new warning/error spam in logs
-- [ ] Knowledge note written or updated in `knowledge/`
+- [ ] Knowledge note in `knowledge/` closed: Claude-drafted mechanics + your decisions/gotchas sections
 - [ ] ROADMAP.md status updated
 
 Plans add feature-specific checks on top. Variation challenge is recommended before the phase gate, not blocking per feature.
@@ -54,7 +54,7 @@ Plans add feature-specific checks on top. Variation challenge is recommended bef
 
 - [ ] Package and install on a real Android device
 - [ ] Full coop session test over EOS — at least two of: Win↔Win, Win↔Android, Android↔Android (include voice)
-- [ ] Device performance capture (stat unit / Unreal Insights) compared against budgets; update the budget table if reality disagrees
+- [ ] **[You]** Device performance capture (stat unit / Unreal Insights) compared against budgets; update the budget table if reality disagrees. Profiling is a reps skill (P2.8) — never delegate this one
 - [ ] Backlog triage: bugs and deferred items either scheduled or parked with a note
 - [ ] Skim the phase's knowledge notes — fill gaps while memory is fresh
 
@@ -67,9 +67,12 @@ feature: <P1.3>
 date: <YYYY-MM-DD>
 ---
 # <Topic>
-## What was built
-## How it works (key classes & flow)
-## Gotchas & fixes
-## Would do differently
-## Links (code paths, docs, related notes)
+## What was built                           <!-- [Claude] drafts from the code -->
+## How it works (key classes & flow)        <!-- [Claude] drafts from the code -->
+## Decisions & why                          <!-- [You] -->
+## Gotchas & fixes                          <!-- [You] -->
+## Would do differently                     <!-- [You] -->
+## Links (code paths, docs, related notes)  <!-- [Claude] drafts, you prune -->
+## Quiz results (optional)                  <!-- appended by quiz mode -->
+
 ```

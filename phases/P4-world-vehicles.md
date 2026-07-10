@@ -1,6 +1,6 @@
-# P4 — World, Vehicles & Flight (post-release menu)
+# P4 — World, Vehicles & Flight (production menu)
 
-Goal: the large-world and vehicle skills behind the Snowrunner- and Star Citizen-flavored episodes. No dates. Entries are brief; the generator expands them on demand.
+Goal: the large-world and vehicle skills behind the Snowrunner- and Star Citizen-flavored episodes. No dates — if a Snowrunner-like game is green-lit first, P4.1–P4.3 jump the queue. Entries are brief; the generator expands them on demand.
 
 ## P4.1 — Landscape & environment
 Landscape sculpting/painting, foliage, mobile-viable environment lighting; layout driven by **recognizable landmarks** (the Star Citizen note: players navigate and describe places by memorable patterns — design for "meet me at the split rock"). **Maps to**: Snowrunner, Star Citizen. **Prereqs**: P0.5. **Est**: 3.

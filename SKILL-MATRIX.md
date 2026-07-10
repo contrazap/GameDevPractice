@@ -4,7 +4,7 @@ The 17 reference games mapped to the skills we take from them and where those ar
 
 | Game | What we take from it | Covered in |
 |---|---|---|
-| GTFO | Coop horror FPS loop: stealth vs hordes, terminals, bioscans, darkness/flashlight, resource scarcity, team revive | **P1 (entire phase)** — this is the September game |
+| GTFO | Coop horror FPS loop: stealth vs hordes, terminals, bioscans, darkness/flashlight, resource scarcity, team revive | **P1 (entire phase)** — the first vertical slice & leading production candidate |
 | Project IGI | FPS gunplay, AI perception/stealth | P1.3, P1.6 |
 | PUBG | Weapons feel, session/matchmaking flow, inventory | P1.3, P1.11, P3.3 |
 | Dark Souls 2 | Melee: lock-on, stamina, dodge i-frames, combos, checkpoint design | P3.1 |
@@ -18,7 +18,7 @@ The 17 reference games mapped to the skills we take from them and where those ar
 | Words of Wonders | Word puzzle data + mobile-first UMG | P3.7 |
 | HayDay | Production-chain timers, offline timers, soft economy | P3.8 |
 | Subway Surfers | Endless runner, procedural track segments, mobile perf | P4.5, P0.3 (touch) |
-| Snowrunner | Offroad vehicle physics, cargo/winch, open map, seasonal DLC release model | P4.1–P4.3 (DLC model = release strategy, not a feature) |
+| Snowrunner | Offroad vehicle physics, cargo/winch, open map, seasonal DLC release model | P4.1–P4.3; DLC pipeline → P5.5 |
 | Star Citizen | Flight + simple/complex/automated control abstraction; recognizable-landmark world design | P4.4, P4.1 |
 | Age of Empires | RTS: selection, pathfinding, fog of war, economy | P5.2 |
 | Chained Together | Networked physics coupling between players | P5.3 |
@@ -31,6 +31,8 @@ The 17 reference games mapped to the skills we take from them and where those ar
 | Input (KB/M, gamepad, touch) | P0.3 |
 | Coop multiplayer: sessions/voice (done in EOS test) → gameplay replication | P0.2, P0.4, then every networked feature |
 | Cloud saves / persistence | P0.6, P2.7 |
+| DLC & live content, cross-game progression (ecosystem model) | P5.5, P0.6, P2.7 |
+| Profiling & optimization | P0.5, P2.8, every phase gate |
 | Asset pipeline (Meshy/Blender/UE) | P0.7 + every Assets section |
 | FPS combat, AI, level design, lighting | P1 |
 | Animation, materials/VFX, audio, UMG depth | P2 |

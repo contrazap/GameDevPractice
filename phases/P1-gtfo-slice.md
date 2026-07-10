@@ -1,6 +1,8 @@
-# P1 — GTFO-like Vertical Slice (the September spine)
+# P1 — GTFO-like Vertical Slice (first slice & production gate)
 
-Goal: a small playable coop level with the GTFO core loop — sneak through darkness among sleeping enemies, manage scarce resources, trigger objectives that wake the nightmare, survive the wave, extract. This phase is a **prototype of the real September game**: its code, plugin, and knowledge notes carry straight into real development. Build order below is dependency order; ⭐ items form the minimum slice if time runs short.
+Goal: a small playable coop level with the GTFO core loop — sneak through darkness among sleeping enemies, manage scarce resources, trigger objectives that wake the nightmare, survive the wave, extract. This phase is your **first complete vertical slice**: the generic coop-action toolkit (interaction, weapons, health/revive, AI, HUD, sessions) every production candidate needs, and the proof you can ship a whole loop. If the GTFO-like game is green-lit at the gate, this code and its knowledge notes carry straight into production. Build order below is dependency order; ⭐ items form the minimum slice.
+
+**Interleave P2 fundamentals (standing recommendation):** P2.1 animation fundamentals before P1.3/P1.6 (its upgrade pass comes after) · P2.2 materials/Niagara alongside P1.3/P1.7 · P2.3 audio before P1.8/P1.10. Pull each in when the P1 feature would otherwise lean on concepts you haven't practiced.
 
 ## P1.1 — Interaction framework ⭐
 
@@ -59,5 +61,5 @@ From EOS-test plumbing to a game flow: main menu → host (friend-joinable) or q
 
 ## P1.12 — Phase gate ⭐
 
-Per CONVENTIONS.md: Android device package, full cross-platform coop playthrough of P1.10's map (Win↔Android with voice), device perf capture vs budgets (especially P1.6 enemy counts + P1.7 lighting), triage, knowledge note review. Exit criteria: the slice is fun for 15 minutes with a friend — that's the September green light.
+Per CONVENTIONS.md: Android device package, full cross-platform coop playthrough of P1.10's map (Win↔Android with voice), device perf capture vs budgets (especially P1.6 enemy counts + P1.7 lighting), triage, knowledge note review. Exit criteria: the slice is fun for 15 minutes with a friend — this is the **production gate**: decide here whether to green-light the first production game (GTFO-like or another) or keep deepening with P2/P3+ first.
 **Prereqs**: everything above (⭐ minimum: P1.1, P1.3, P1.5, P1.6, P1.7, P1.9). **Est**: 1–2.

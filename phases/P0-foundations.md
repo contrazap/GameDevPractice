@@ -4,12 +4,12 @@ Goal: a clean practice project where multiplayer, Android, saves, and the asset 
 
 ## P0.1 — Clean project & source control ⭐
 
-Fresh UE 5.8 C++ project (Blank or Third Person template as a base to strip). Set up git with LFS (`.gitignore`/`.gitattributes` for UE), folder structure and naming conventions (Content and Source layout), editor project settings baseline (target platforms Windows + Android from day one). Decide module layout: game module + room for the EOS plugin from P0.2. This project is the single umbrella practice game everything else lives in.
+Fresh UE 5.8 **Blank C++** project, **`UnifiedGameProject/` at this repo's root** — planning and implementation share one repo. Add Git LFS to the existing repo (`.gitignore`/`.gitattributes` for UE, scoped to the project folder — no `git init`, no nested repo), folder structure and naming conventions (Content and Source layout), editor project settings baseline (target platforms Windows + Android from day one). Decide module layout: game module + room for the EOS plugin from P0.2. This project is the single umbrella practice game everything else lives in.
 **Skills**: project anatomy, build targets, source control for binary-heavy projects. **Prereqs**: none. **Est**: 1. **Networked**: n/a. **Assets**: none.
 
 ## P0.2 — EOS plugin port ⭐
 
-Extract the working multiplayer from the EOS test project (Epic login, host/join/leave session, voice chat mute/unmute) into a clean, reusable plugin or module in the new project — proper separation this time: no gameplay code in the plugin, a small clean API surface for the game to call. Re-verify Windows↔Android session + voice at the end. This plugin is intended to ship in the real September game.
+Extract the working multiplayer from the EOS test project (Epic login, host/join/leave session, voice chat mute/unmute) into a clean, reusable plugin or module in the new project — proper separation this time: no gameplay code in the plugin, a small clean API surface for the game to call. Re-verify Windows↔Android session + voice at the end. This plugin is intended to ship in **every** production game — it's the shared substrate of the DLC ecosystem.
 **Skills**: plugins/modules, code organization, EOS Online Subsystem review (second exposure = retention). **Prereqs**: P0.1. **Est**: 2–3. **Networked**: yes (sessions layer). **Assets**: none.
 
 ## P0.3 — Input abstraction ⭐
@@ -29,7 +29,7 @@ Package and deploy to a real Android device from this project; set up device pro
 
 ## P0.6 — Save architecture + cloud saves ⭐
 
-Local SaveGame architecture (settings + player progression stub, save slots) and then EOS Player Data Storage sync on top: save on Windows, continue on Android and back — the crossplay-progression pillar proven in miniature. Design for the future: a version field and a plan for schema migration (deepened later in P2.7).
+Local SaveGame architecture (settings + player progression stub, save slots) and then EOS Player Data Storage sync on top: save on Windows, continue on Android and back — the crossplay-progression pillar proven in miniature. Design for the future: a version field and a plan for schema migration (deepened later in P2.7 ⭐). Design saves as **account-level data from day one** — under the episodic-DLC ecosystem model, progression and collectibles outlive any single game, so keep the schema game-agnostic where possible (identity, cross-game collectibles) and versioned everywhere.
 **Skills**: SaveGame system, EOS Player Data Storage, cross-device state. **Prereqs**: P0.2. **Est**: 2. **Networked**: cloud, not gameplay. **Assets**: none.
 
 ## P0.7 — Asset pipeline shakedown ⭐

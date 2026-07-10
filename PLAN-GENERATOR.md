@@ -1,13 +1,14 @@
 # Plan Generator
 
-Reusable instruction set. One invocation generates **one** feature plan into `features/`. Paste the invocation block below into a Claude Code session running in this folder (give it access to the game repo too, if it exists — real code beats assumptions).
+Reusable instruction set. One invocation generates **one** feature plan into `features/`. Paste the invocation block below into a Claude Code session running in this folder (the game project lives at `UnifiedGameProject/` in this same repo, so real code is always in reach — real code beats assumptions).
 
 ## Invocation (copy, fill, paste)
 
 ```
 Read PLAN-GENERATOR.md in this folder and follow it exactly.
 Feature: <ID, e.g. P1.3>
-Mode: <primer | guided-build | variation | quiz>
+Mode: <primer | guided-build | variation | quiz | asset-build>
+Asset: <asset-build mode only — the asset's name from the feature plan's Assets section>
 Notes: <optional — time constraints, scope tweaks, what's already done, device on hand>
 ```
 
@@ -18,7 +19,8 @@ Notes: <optional — time constraints, scope tweaks, what's already done, device
 | `primer` | Before building something unfamiliar | Concepts, engine systems involved, architecture sketch, design rationale from the reference games. No step-by-step build. Ends with 3–5 readiness questions for the user to self-check. |
 | `guided-build` | Ready to build | The full plan (all sections below). If a primer for this feature exists, don't repeat it — reference and extend it. |
 | `variation` | Feature is ✅ done, user wants retention practice | A spec for a *variant* of the feature to be built by the user alone (no implementation guidance, no code). States what may be consulted: own knowledge notes + engine docs, not the original implementation or Claude. Includes its own small DoD. |
-| `quiz` | After building, to test understanding | 6–10 questions about the actual implementation (reference real class/function names from the game repo if accessible), from "explain the flow" to "what breaks if X". Provide answers in a collapsed section at the end. May append results to the knowledge note instead of creating a plan file. |
+| `quiz` | After building, to test understanding | 6–10 questions about the actual implementation (reference real class/function names from `UnifiedGameProject/`), from "explain the flow" to "what breaks if X". Provide answers in a collapsed section at the end. May append results to the knowledge note instead of creating a plan file. |
+| `asset-build` | An asset from a feature plan's Assets section will be self-made (or needs heavy Meshy cleanup) | A per-asset creation plan extending ASSET-PIPELINE.md: reference/concept step, DCC workflow (blockout → detail → retopo → UVs → bake → ORM → export preset → UE import + verification), the [You]/[Claude]/[Pair] learning split applied to Blender work, budget rows from CONVENTIONS.md, and its own small DoD. File: `features/<featureID>-asset-<slug>.md`. Never blocks the feature — the placeholder ships first. |
 
 ## Procedure
 
@@ -62,7 +64,7 @@ Concepts, UE systems/classes involved, architecture sketch (ASCII ok). Sized to 
 **In:** … **Out:** … **Cut lines:** what to drop first if the session estimate busts.
 
 ## Assets
-What's needed and the acquisition route per ASSET-PIPELINE.md (free pack / Meshy / hand-model / engine placeholder), with budget targets. Or "None".
+Per asset: the recommended acquisition route per ASSET-PIPELINE.md **and** the self-build alternative, each with an estimated session cost so the choice is informed (self-build → generate an `asset-build` plan; it runs parallel and never blocks the feature — placeholder first). Budget targets per CONVENTIONS.md. Or "None".
 
 ## Steps
 Grouped by session. Each step tagged [You] / [Claude] / [Pair] with a one-line why for [You] tags.
