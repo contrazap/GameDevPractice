@@ -24,7 +24,7 @@ Notes: <optional — time constraints, scope tweaks, what's already done, device
 
 ## Procedure
 
-1. **Read first**: `CONVENTIONS.md` → the feature's entry in its `phases/P<n>-*.md` file → its row/neighborhood in `ROADMAP.md` (what's done, what's parked) → relevant `SKILL-MATRIX.md` rows → `ASSET-PIPELINE.md` if assets are involved → related `knowledge/` notes and prior `features/` plans (build on what exists; never re-teach what a knowledge note says the user already knows).
+1. **Read first**: `CONVENTIONS.md` → the feature's entry in its `phases/P<n>-*.md` file → its row/neighborhood in `ROADMAP.md` (what's done, what's parked) → relevant `SKILL-MATRIX.md` rows → `ASSET-PIPELINE.md` if assets are involved → related `knowledge/` notes, `reference/` snapshots, and prior `features/` plans (build on what exists; never re-teach what a knowledge note says the user already knows). Plans must cite **in-repo** sources for anything they depend on — if a plan needs external material (another project's code or docs), snapshot it into `reference/` first; external projects are provenance, not dependencies.
 2. **Thin entries**: P2–P5 phase entries are brief. If the entry is too thin to plan from, first propose an expanded 3–6 sentence feature description, get the user's confirmation (or adjustment), write it back into the phase file, then generate the plan.
 3. **Clarify or proceed**: If something genuinely changes the plan's shape, ask at most 3 questions before generating. Otherwise proceed with stated assumptions.
 4. **Size it**: A plan must fit **2–6 sessions** (per CONVENTIONS). If bigger, propose a split into `P<x>.<n>a/b/...` (update the phase file and ROADMAP with the split), then generate the plan for the first part only.

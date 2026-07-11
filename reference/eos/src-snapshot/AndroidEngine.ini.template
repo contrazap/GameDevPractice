@@ -1,0 +1,8 @@
+; ==========================================================================
+; TEMPLATE (tracked). Copy this file to AndroidEngine.ini (same folder) and
+; fill in your real EOS keys from the Epic Games Dev Portal. The copy is
+; gitignored so your secrets never get committed. See docs/SECRETS_SETUP.md.
+; Used when cooking/packaging Android builds.
+; ==========================================================================
+[/Script/OnlineSubsystemEOS.EOSSettings]
++Artifacts=(ArtifactName="GTFOClone",ClientId="<YOUR_EOS_CLIENT_ID>",ClientSecret="<YOUR_EOS_CLIENT_SECRET>",ProductId="<YOUR_EOS_PRODUCT_ID>",SandboxId="<YOUR_EOS_SANDBOX_ID>",DeploymentId="<YOUR_EOS_DEPLOYMENT_ID>",ClientEncryptionKey="<YOUR_EOS_ENCRYPTION_KEY>")

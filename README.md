@@ -16,6 +16,7 @@ Created 2026-07-09. Feature plans are generated **on demand** — this folder st
 | [ASSET-PIPELINE.md](ASSET-PIPELINE.md) | Meshy → Blender → UE workflow, free asset sources, cleanup checklists. |
 | [SKILL-MATRIX.md](SKILL-MATRIX.md) | The 17 reference games → skill domains → where each is covered. |
 | [knowledge/](knowledge/) | Your personal wiki — one note per finished feature (how it works + gotchas). |
+| [reference/](reference/) | In-repo snapshots of external source material plans depend on (e.g. the EOS test project's guide + code), so plans stay executable if the originals vanish. |
 | UnifiedGameProject/ | The umbrella UE 5.8 C++ game project itself — created in P0.1 at this repo's root; every feature is built here. |
 
 ## The loop (per feature)

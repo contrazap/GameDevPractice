@@ -14,7 +14,7 @@ Estimates are in **sessions** (~2–4h, Claude-assisted pace). Details per featu
 ## P0 — Foundations & Pipeline — [phases/P0-foundations.md](phases/P0-foundations.md)
 
 - ✅ ⭐ **P0.1** Clean UE 5.8 C++ project, git + LFS, project conventions (1)
-- ⬜ ⭐ **P0.2** Port EOS test into a reusable plugin (sessions, login, voice) (2–3)
+- 📋 ⭐ **P0.2** Port EOS test into a reusable plugin (sessions, login, voice) (2–3)
 - ⬜ ⭐ **P0.3** Enhanced Input abstraction: KB/M + gamepad + touch, input contexts (2)
 - ⬜ ⭐ **P0.4** First-person character + replication fundamentals (2–3)
 - ⬜ ⭐ **P0.5** Android pipeline & performance baseline → validate budget table (2)
