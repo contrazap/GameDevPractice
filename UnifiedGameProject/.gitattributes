@@ -1,0 +1,76 @@
+# ============================================================================
+#  UnifiedGameProject — UE 5.8 .gitattributes (Git LFS routing)
+#  Scoped to this project folder so LFS rules apply only to this subtree of the
+#  shared GameDevPractice repo. Patterns are unanchored (e.g. *.uasset) so they
+#  match binary assets at any depth under this folder (Content/, Plugins/, etc.).
+#
+#  Each LFS line means: store the file in LFS (filter), diff/merge via LFS,
+#  and -text = treat as binary (no CRLF/LF conversion — critical for assets).
+#
+#  Requires `git lfs install` (done) before these take effect on add/commit.
+#  Verify with:  git lfs track     (lists these patterns)
+#                git lfs ls-files  (lists actual tracked files after a commit)
+# ============================================================================
+
+# ---- Unreal native assets --------------------------------------------------
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap   filter=lfs diff=lfs merge=lfs -text
+
+# ---- 3D models / source meshes ---------------------------------------------
+# NOTE: *.obj is intentionally NOT routed here — it collides with C++ compiled
+# object files (already gitignored). Add it only if you import .obj source meshes.
+*.fbx  filter=lfs diff=lfs merge=lfs -text
+*.3ds  filter=lfs diff=lfs merge=lfs -text
+*.dae  filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.glb  filter=lfs diff=lfs merge=lfs -text
+*.abc  filter=lfs diff=lfs merge=lfs -text
+*.stl  filter=lfs diff=lfs merge=lfs -text
+
+# ---- Textures / images -----------------------------------------------------
+*.png  filter=lfs diff=lfs merge=lfs -text
+*.tga  filter=lfs diff=lfs merge=lfs -text
+*.jpg  filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.bmp  filter=lfs diff=lfs merge=lfs -text
+*.tif  filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.exr  filter=lfs diff=lfs merge=lfs -text
+*.hdr  filter=lfs diff=lfs merge=lfs -text
+*.psd  filter=lfs diff=lfs merge=lfs -text
+
+# ---- Audio -----------------------------------------------------------------
+*.wav  filter=lfs diff=lfs merge=lfs -text
+*.mp3  filter=lfs diff=lfs merge=lfs -text
+*.ogg  filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aif  filter=lfs diff=lfs merge=lfs -text
+*.aiff filter=lfs diff=lfs merge=lfs -text
+
+# ---- Video -----------------------------------------------------------------
+*.mp4  filter=lfs diff=lfs merge=lfs -text
+*.mov  filter=lfs diff=lfs merge=lfs -text
+*.avi  filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+
+# ---- Fonts -----------------------------------------------------------------
+*.ttf  filter=lfs diff=lfs merge=lfs -text
+*.otf  filter=lfs diff=lfs merge=lfs -text
+
+# ---- Archives / other binaries ---------------------------------------------
+*.zip  filter=lfs diff=lfs merge=lfs -text
+*.7z   filter=lfs diff=lfs merge=lfs -text
+*.rar  filter=lfs diff=lfs merge=lfs -text
+*.bin  filter=lfs diff=lfs merge=lfs -text
+*.pak  filter=lfs diff=lfs merge=lfs -text
+*.upk  filter=lfs diff=lfs merge=lfs -text
+*.udk  filter=lfs diff=lfs merge=lfs -text
+
+# ============================================================================
+#  FILE LOCKING (deferred — cut line 1 in the plan; optional for a solo repo).
+#  LFS locking prevents merge conflicts on un-mergeable binaries in a team.
+#  To enable later, append `lockable` to the asset lines you want locked, e.g.:
+#     *.uasset filter=lfs diff=lfs merge=lfs -text lockable
+#     *.umap   filter=lfs diff=lfs merge=lfs -text lockable
+#  then use `git lfs lock <file>` / `git lfs unlock <file>`.
+# ============================================================================
