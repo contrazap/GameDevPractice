@@ -1,0 +1,11 @@
+; ==========================================================================
+; TEMPLATE (tracked). Copy this file to AndroidEngine.ini (same folder) and
+; fill in your real EOS keys from the Epic Games Dev Portal. The copy is
+; gitignored so your secrets never get committed. See reference/eos/SECRETS_SETUP.md.
+; Used when cooking/packaging Android builds.
+;
+; ArtifactName is NOT a secret and is pinned: it must match DefaultArtifactName
+; in Config/DefaultEngine.ini, or EOS ignores this whole Artifacts line.
+; ==========================================================================
+[/Script/OnlineSubsystemEOS.EOSSettings]
++Artifacts=(ArtifactName="UnifiedGameProject",ClientId="<YOUR_EOS_CLIENT_ID>",ClientSecret="<YOUR_EOS_CLIENT_SECRET>",ProductId="<YOUR_EOS_PRODUCT_ID>",SandboxId="<YOUR_EOS_SANDBOX_ID>",DeploymentId="<YOUR_EOS_DEPLOYMENT_ID>",ClientEncryptionKey="<YOUR_EOS_ENCRYPTION_KEY>")

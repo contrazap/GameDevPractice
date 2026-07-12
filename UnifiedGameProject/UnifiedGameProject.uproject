@@ -17,6 +17,26 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "OnlineCore",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "VoiceChat",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

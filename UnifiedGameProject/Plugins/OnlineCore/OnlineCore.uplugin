@@ -1,0 +1,40 @@
+{
+    "FileVersion": 3,
+
+    "FriendlyName": "Online Core",
+    "Version": 1,
+    "VersionName": "1.0",
+    "Description": "Online Core for multiplayer",
+    "Category": "Online Platform",
+    "EnabledByDefault": false,
+
+    "Modules": [
+        {
+            "Name": "OnlineCore",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "PlatformAllowList": [
+                "Win64",
+                "Android"
+            ]
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "OnlineSubsystem",
+            "Enabled": true
+        },
+        {
+            "Name": "OnlineSubsystemUtils",
+            "Enabled": true
+        },
+        {
+            "Name": "OnlineSubsystemEOS",
+            "Enabled": true
+        },
+        {
+            "Name": "VoiceChat",
+            "Enabled": true
+        }
+    ]
+}

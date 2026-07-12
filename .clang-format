@@ -1,0 +1,39 @@
+# Epic Games C++ coding standard, for clang-format.
+# Placed at repo root: clang-format searches upward from each file, so this
+# governs UnifiedGameProject/ and anything added later.
+# Reference: https://docs.unrealengine.com/5.3/en-US/epic-cplusplus-coding-standard-for-unreal-engine/
+
+Language: Cpp
+BasedOnStyle: LLVM
+
+# --- Indentation: tabs, 4 wide (Epic uses hard tabs) ---
+UseTab: Always
+TabWidth: 4
+IndentWidth: 4
+AccessModifierOffset: -4          # public:/private: sit at the class's own level
+NamespaceIndentation: All
+IndentCaseLabels: false
+
+# --- Pointers/references bind to the type: FString* Ptr, not FString *Ptr ---
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+
+# --- Allman braces: every brace on its own line ---
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: Empty   # void Foo() {} stays one line
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Empty
+
+# --- Epic does not hard-wrap at a column; don't let clang-format reflow code ---
+ColumnLimit: 0
+
+# --- CRITICAL: never reorder includes. ---
+# Unreal requires a .cpp's own header first, and *.generated.h last in a header.
+# Sorting would silently break both.
+SortIncludes: false
+
+SpaceBeforeParens: ControlStatements  # if (x), but Foo(x)
+Cpp11BracedListStyle: false
+FixNamespaceComments: false
