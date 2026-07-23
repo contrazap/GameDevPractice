@@ -17,6 +17,24 @@ never at `Content/` root — so it never collides with engine or plugin content.
 | `UI/` | UMG widgets, UI-only textures, fonts |
 | `Environments/` | Modular kit pieces, props, environment meshes + materials |
 | `Core/` | Shared base classes, gameplay-framework BPs, data assets, common materials/functions |
+| `Titles/<Title>/` | Everything owned by one title — same type-folder layout inside (e.g. `Titles/GTFO/Weapons/`) |
+
+## Title namespace & chunk discipline (one-app, titles-as-DLC)
+
+The production model is one shipped app with titles delivered as DLC chunks (ROADMAP →
+P5.5/P5.6). Foldering enforces chunkability from the first asset — retrofitting chunk boundaries
+onto tangled content is the expensive path:
+
+- **Base/shared content** lives in the type folders above (hub/test maps, session UI, core BPs,
+  shared materials) → ships in the base install (chunk 0). `L_Sandbox` and the session-menu UI
+  are base content.
+- **Title content** lives under `Titles/<Title>/` with the same type-folder layout inside → becomes
+  that title's DLC chunk(s) at P5.5. The first title folder (`Titles/GTFO/`) appears with P1.1's
+  first asset.
+- **Reference rules:** a title may hard-reference base content; base content **never** references
+  title content; **titles never hard-reference each other**. Crossover content gets its own
+  `Titles/<Crossover>/` folder and reaches foreign titles via soft references
+  (`TSoftObjectPtr` / soft class refs) only, declaring chunk dependencies at P5.5.
 
 ## Asset prefixes
 

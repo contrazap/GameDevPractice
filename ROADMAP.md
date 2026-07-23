@@ -5,11 +5,11 @@ Estimates are in **sessions** (~2–4h, Claude-assisted pace). Details per featu
 
 ## Sequencing & pace
 
-- **The plan gates production — not a calendar date.** Production development starts when this practice plan says you're ready. Every production game will be coop + episodic DLC in one shared ecosystem (progression/collectibles cross titles), which is why the EOS plugin (P0.2), account-level saves (P0.6/P2.7), and DLC delivery (P5.5) are load-bearing beyond any single game.
+- **The plan gates production — not a calendar date.** Production development starts when this practice plan says you're ready. The production game is **one shipped app**: coop titles released as episodic DLC into the same unified game (one player base carried title to title; progression/collectibles cross titles), which is why the EOS plugin (P0.2), account-level saves (P0.6/P2.7), and DLC delivery (P5.5) are load-bearing beyond any single title.
 - **Spine: P0 → P1, in dependency order.** P0+P1 ≈ 38–47 sessions; pace by sessions/week, not dates. If a phase drags, finish its ⭐ items first and park the rest.
 - **Interleave P2 with P1 (standing recommendation, not time-permitting):** P2.1 animation fundamentals before P1.3/P1.6 (its upgrade pass comes after) · P2.2 materials/Niagara alongside P1.3/P1.7 · P2.3 audio before P1.8/P1.10 · minigames (P2.5/P2.6) as breather sessions anytime after prereqs.
-- **P1.12 is the production gate.** Exit: the coop slice is fun for 15 minutes with a friend, on-device, cross-platform. Then decide — green-light the first production game (GTFO-like or another), or keep deepening with P2/P3+.
-- **P3–P5 are the production menu.** No fixed order: whichever game gets green-lit pulls its phase forward (Snowrunner-like → P4.1–P4.3 jump the queue; survival → P3.3/P3.4). Generate plans on demand.
+- **P1.12 is the production gate.** Exit: the coop slice is fun for 15 minutes with a friend, on-device, cross-platform. Then decide — green-light starting the production build (the real unified app, built fresh from these learnings), or keep deepening with P2/P3+.
+- **P3–P5 are the production menu.** No fixed order: whichever title gets green-lit next pulls its phase forward (Snowrunner-like → P4.1–P4.3 jump the queue; survival → P3.3/P3.4). Generate plans on demand.
 
 ## P0 — Foundations & Pipeline — [phases/P0-foundations.md](phases/P0-foundations.md)
 
@@ -33,7 +33,7 @@ Estimates are in **sessions** (~2–4h, Claude-assisted pace). Details per featu
 - ⬜ **P1.8** Objectives & alarms: bioscans, alarm-door defense, extraction (2–3)
 - ⬜ ⭐ **P1.9** HUD & team feedback: ammo/health, hitmarkers, ping system (2)
 - ⬜ **P1.10** Greybox rundown map: modular kit, zones, lighting, navmesh (2–3)
-- ⬜ **P1.11** Session & lobby flow hardening: menus, friend/random join, leave/rejoin (2)
+- ⬜ **P1.11** Session & lobby flow hardening: menus, map/mode selection, friend/random join, leave/rejoin (2–3)
 - ⬜ ⭐ **P1.12** Phase gate: Android package, cross-platform coop playtest, perf pass (1–2)
 
 ## P2 — Engine Breadth (interleave with P1; continues after) — [phases/P2-engine-breadth.md](phases/P2-engine-breadth.md)
@@ -72,4 +72,5 @@ Estimates are in **sessions** (~2–4h, Claude-assisted pace). Details per featu
 - ⬜ **P5.2** RTS slice (AoE): selection, pathfinding, fog of war (4–5)
 - ⬜ **P5.3** Networked physics coop (Chained Together) — research-heavy (3–4)
 - ⬜ **P5.4** Server architecture: dedicated servers, host-leaves problem, EAC, Epic app review for public matchmaking (2–3)
-- ⬜ **P5.5** DLC & live-content pipeline: chunks/paks, patching, Play Asset Delivery, EOS entitlements, cross-game content (2–3)
+- ⬜ ⭐ **P5.5** DLC & live-content pipeline: chunks/paks, patching, Play Asset Delivery, EOS entitlements, cross-title content (2–3)
+- ⬜ **P5.6** Unified front-end: title hub & content browser — discover/download/manage titles in-app (2–3)

@@ -37,6 +37,10 @@
 		{
 			"Name": "VoiceChat",
 			"Enabled": true
+		},
+		{
+			"Name": "ModelContextProtocol",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

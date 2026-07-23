@@ -1,6 +1,6 @@
 # Game Dev Practice Planning
 
-Planning system for UE 5.8 practice building the full production skill base. Every future production game is coop and part of one episodic-DLC ecosystem (shared progression/collectibles across titles, Fortnite-style unified model). Production start is gated by this plan, not a date: the first game (GTFO-like or another) is green-lit at the P1 production gate (P1.12).
+Planning system for UE 5.8 practice building the full production skill base. The production model rehearsed here is **one shipped app** with **titles-as-DLC**: distinct game titles (GTFO-like first; later Snowrunner-like, Souls-like, space-exploration and others, crossovers included) released as purchasable DLC into one unified game, so the player base each title earns carries forward to the next — Fortnite's ecosystem shape with Snowrunner's purchase structure. This repo is the **proof of concept** for that approach: UnifiedGameProject rehearses the architecture end-to-end (sessions, saves, DLC delivery, the title hub); the actual production game is built fresh from these learnings. Production start is gated by this plan, not a date — green-lit at the P1 production gate (P1.12).
 
 Created 2026-07-09. Feature plans are generated **on demand** — this folder starts with structure + phase overviews only.
 

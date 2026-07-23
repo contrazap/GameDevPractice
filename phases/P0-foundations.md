@@ -9,7 +9,7 @@ Fresh UE 5.8 **Blank C++** project, **`UnifiedGameProject/` at this repo's root*
 
 ## P0.2 — EOS plugin port ⭐
 
-Extract the working multiplayer from the EOS test project (Epic login, host/join/leave session, voice chat mute/unmute) into a clean, reusable plugin or module in the new project — proper separation this time: no gameplay code in the plugin, a small clean API surface for the game to call. Re-verify Windows↔Android session + voice at the end. This plugin is intended to ship in **every** production game — it's the shared substrate of the DLC ecosystem.
+Extract the working multiplayer from the EOS test project (Epic login, host/join/leave session, voice chat mute/unmute) into a clean, reusable plugin or module in the new project — proper separation this time: no gameplay code in the plugin, a small clean API surface for the game to call. Re-verify Windows↔Android session + voice at the end. The unified production app ships this plugin once and **every title rides it** — the shared substrate of the DLC ecosystem.
 **Skills**: plugins/modules, code organization, EOS Online Subsystem review (second exposure = retention). **Prereqs**: P0.1. **Est**: 2–3. **Networked**: yes (sessions layer). **Assets**: none.
 
 ## P0.3 — Input abstraction ⭐
@@ -29,7 +29,7 @@ Package and deploy to a real Android device from this project; set up device pro
 
 ## P0.6 — Save architecture + cloud saves ⭐
 
-Local SaveGame architecture (settings + player progression stub, save slots) and then EOS Player Data Storage sync on top: save on Windows, continue on Android and back — the crossplay-progression pillar proven in miniature. Design for the future: a version field and a plan for schema migration (deepened later in P2.7 ⭐). Design saves as **account-level data from day one** — under the episodic-DLC ecosystem model, progression and collectibles outlive any single game, so keep the schema game-agnostic where possible (identity, cross-game collectibles) and versioned everywhere. Note: Player Data Storage encrypts client-side with the `ClientEncryptionKey` generated in P0.2 (lives only in the gitignored platform inis + password manager) — it must never change once saves are uploaded; a lost/changed key makes existing cloud saves undecryptable (login/sessions/local saves unaffected; cloud saves restart from zero).
+Local SaveGame architecture (settings + player progression stub, save slots) and then EOS Player Data Storage sync on top: save on Windows, continue on Android and back — the crossplay-progression pillar proven in miniature. Design for the future: a version field and a plan for schema migration (deepened later in P2.7 ⭐). Design saves as **account-level data from day one** — under the episodic-DLC ecosystem model, progression and collectibles outlive any single title, so keep the schema title-agnostic where possible (identity, cross-title collectibles) and versioned everywhere. Note: Player Data Storage encrypts client-side with the `ClientEncryptionKey` generated in P0.2 (lives only in the gitignored platform inis + password manager) — it must never change once saves are uploaded; a lost/changed key makes existing cloud saves undecryptable (login/sessions/local saves unaffected; cloud saves restart from zero).
 **Skills**: SaveGame system, EOS Player Data Storage, cross-device state. **Prereqs**: P0.2. **Est**: 2. **Networked**: cloud, not gameplay. **Assets**: none.
 
 ## P0.7 — Asset pipeline shakedown ⭐
